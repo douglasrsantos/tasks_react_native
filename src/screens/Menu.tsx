@@ -22,24 +22,28 @@ export default (props: any) => {
         >
             <Drawer.Screen
                 name='Today'
-                component={(props: any) => <TaskList title='Hoje' daysAhead={0} {...props} />}
                 options={{ title: 'Hoje' }}
-            />
+            >
+                {(props: any) => <TaskList title='Hoje' daysAhead={0} {...props} />}
+            </Drawer.Screen>
             <Drawer.Screen
                 name='Tomorrow'
-                component={(props: any) => <TaskList title='Amanhã' daysAhead={1} {...props} />}
                 options={{ title: 'Amanhã' }}
-            />
+            >
+                {(props: any) => <TaskList title='Amanhã' daysAhead={1} {...props} />}
+            </Drawer.Screen>
             <Drawer.Screen
                 name='Week'
-                component={(props: any) => <TaskList title='Semana' daysAhead={7} {...props} />}
                 options={{ title: 'Semana' }}
-            />
+            >
+                {(props: any) => <TaskList title='Semana' daysAhead={7} {...props} />}
+            </Drawer.Screen>
             <Drawer.Screen
                 name='Month'
-                component={(props: any) => <TaskList title='Mês' daysAhead={30} {...props} />}
                 options={{ title: 'Mês' }}
-            />
+            >
+                {(props: any) => <TaskList title='Mês' daysAhead={30} {...props} />}
+            </Drawer.Screen>
         </Drawer.Navigator>
     )
 
