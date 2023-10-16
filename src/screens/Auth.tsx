@@ -15,7 +15,6 @@ import commonStyles from '../CommonStyles'
 import AuthInput from '../components/AuthInput'
 
 import { server, showError, showSuccess } from '../Common'
-import { useNavigation } from '@react-navigation/native'
 
 interface AppState {
     name: string
@@ -33,9 +32,7 @@ const initialState = {
     stageNew: false
 }
 
-
 export default class Auth extends Component {
-
     state: AppState = {
         ...initialState
     }
@@ -74,6 +71,7 @@ export default class Auth extends Component {
 
             AsyncStorage.setItem('userData', JSON.stringify(res.data))
             axios.defaults.headers.common['Authorization'] = `bearer ${res.data.token}`
+
             this.props.navigation.navigate('Home', res.data)
         } catch (e) {
             showError(e)

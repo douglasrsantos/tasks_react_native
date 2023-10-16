@@ -1,13 +1,12 @@
 import React from 'react'
 import { Platform, View, Text, StyleSheet, TouchableOpacity } from 'react-native'
-import { createDrawerNavigator, DrawerItemList, DrawerNavigationOptions, DrawerContentScrollView } from '@react-navigation/drawer'
+import { createDrawerNavigator, DrawerItemList, DrawerNavigationOptions, DrawerContentScrollView, DrawerNavigationProp } from '@react-navigation/drawer'
 import { Gravatar } from 'react-native-gravatar'
 
 import commonStyles from '../CommonStyles'
 import TaskList from './TaskList'
-
-import axios from 'axios'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import axios from 'axios'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 
